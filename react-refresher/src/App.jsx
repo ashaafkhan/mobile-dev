@@ -2,18 +2,16 @@ import React , {useState} from 'react'
 
 const App = () => {
 
-    const [name,setName] = useState("")
+    const handleSubmit = (e) =>{
+        e.preventDefault()
 
-  return (
-    <>
-        <input 
-        value = {name}
-        placeholder = 'enter your name'
-        onChange= {(e)=>setName(e.target.value)}
-        />
+        console.log(e.target.elements.name.value)
+    }
 
-        <p>Hello {name}</p>
-    </>
+  return (<form onSubmit= {handleSubmit}>
+    <input name="name"/>
+    <button type="submit">Submit</button>
+  </form>
 
 
 )
