@@ -1,12 +1,14 @@
-import H1 from "./H1"
+import {useState} from "react";
+
 function App(){
+
+const [count, setCount] = useState(0)
+
+
     return (
         <div>
-            {/* reusability */}
-            <H1 title="Heading-1" desc= "i am your desc-01"/>
-            <H1 title="Heading-2" desc="i am your desc-02"/>
-            <H1 />
-            <H1 />
+           <h1>{count}</h1>
+           <button onClick = {()=>setCount(count+1)}>➕</button>
         </div>
     )
 }
