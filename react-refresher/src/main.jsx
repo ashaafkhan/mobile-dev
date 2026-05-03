@@ -11,7 +11,6 @@ let name = "Ashaaf"
 
 createRoot(document.getElementById("root")).render(
   <>
-    <h1 className="title" id="heading">Welcome to mobile-dev {name}</h1>
     <App/>
   </>
 )
